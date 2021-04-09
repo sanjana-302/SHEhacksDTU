@@ -14,112 +14,127 @@
     <div class="row container">
         <div class="col-md-12 offset-md-3">
             <h1 class="text-center">Survey</h1>
-            <form action="/questionnaire" method="POST">
+            <form action="/questionnaire" method="POST" novalidate class="needs-validation">
+                <ol type="1">
+                    <li>
+                        <p>How long does the pain lasts at the injection site? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="3 days">
+                            <label class="form-check-label" for="pain">3 days</label>
+                        </div>
 
-                <p>How long does the pain lasts at the injection site? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="3 days">
-                    <label class="form-check-label" for="pain">3 days</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="1 week">
-                    <label class="form-check-label" for="pain">1 week</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="More than a week">
-                    <label class="form-check-label" for="pain">More than a week</label>
-                </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="1 week" required>
+                            <label class="form-check-label" for="pain">1 week</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[pain]" id="pain" value="More than a week">
+                            <label class="form-check-label" for="pain">More than a week</label>
+                        </div>
+                    </li>
 
-                <br><br>
-
-                <p>Have you experienced Fatigue? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[fatigue]" id="fatigue" value="No">
-                    <label class="form-check-label" for="fatigue">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[fatigue]" id="fatigue" value="Yes">
-                    <label class="form-check-label" for="fatigue">Yes</label>
-                </div>
-
-                <br><br>
-
-                <p>Have you experienced any diarrhoea and digestion problem? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[diarrhoea]" id="diarrhoea" value="No">
-                    <label class="form-check-label" for="diarrhoea">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[diarrhoea]" id="diarrhoea" value="Yes">
-                    <label class="form-check-label" for="diarrhoea">Yes</label>
-                </div>
-
-
-                <br><br>
-
-                <p>Have you experienced Fever? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[fever]" id="fever" value="No">
-                    <label class="form-check-label" for="fever">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[fever]" id="fever" value="Yes">
-                    <label class="form-check-label" for="fever">Yes</label>
-                </div>
+                    <br><br>
+                    <li>
+                        <p>Have you experienced Fatigue? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[fatigue]" id="fatigue" value="No" required>
+                            <label class="form-check-label" for="fatigue">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[fatigue]" id="fatigue" value="Yes">
+                            <label class="form-check-label" for="fatigue">Yes</label>
+                        </div>
+                    </li>
+                    <br><br>
+                    <li>
+                        <p>Have you experienced any diarrhoea and digestion problem? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[diarrhoea]" id="diarrhoea" value="No" required>
+                            <label class="form-check-label" for="diarrhoea">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[diarrhoea]" id="diarrhoea" value="Yes">
+                            <label class="form-check-label" for="diarrhoea">Yes</label>
+                        </div>
 
 
-                <br><br>
+                    </li>
+                    <br><br>
+                    <li>
 
-                <p>Have you experienced any kind of allergy? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[allergy]" id="allergy" value="No">
-                    <label class="form-check-label" for="allergy">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[allergy]" id="allergy" value="Yes">
-                    <label class="form-check-label" for="allergy">Yes</label>
-                </div>
+                        <p>Have you experienced Fever? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[fever]" id="fever" value="No" required>
+                            <label class="form-check-label" for="fever">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[fever]" id="fever" value="Yes">
+                            <label class="form-check-label" for="fever">Yes</label>
+                        </div>
 
 
-                <br><br>
+                    </li>
+                    <br><br>
+                    <li>
 
-                <p>Would you recommend others to go for Vaccination? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="No">
-                    <label class="form-check-label" for="recommendation">No, I dont</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="Yes">
-                    <label class="form-check-label" for="recommendation">Yes, I strongly recommend</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="Unsure">
-                    <label class="form-check-label" for="recommendation">Its upto them</label>
-                </div>
+                        <p>Have you experienced any kind of allergy? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[allergy]" id="allergy" value="No" required>
+                            <label class="form-check-label" for="allergy">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[allergy]" id="allergy" value="Yes">
+                            <label class="form-check-label" for="allergy">Yes</label>
+                        </div>
 
-                <br><br>
 
-                <p>Have you taken precautions for 15 days after vaccination? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[precautions]" id="precautions" value="No">
-                    <label class="form-check-label" for="precautions">No</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[precautions]" id="precautions" value="Yes">
-                    <label class="form-check-label" for="precautions">Yes</label>
-                </div>
+                    </li>
+                    <br><br>
+                    <li>
 
-                <br><br>
+                        <p>Would you recommend others to go for Vaccination? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="No" required>
+                            <label class="form-check-label" for="recommendation">No, I dont</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="Yes">
+                            <label class="form-check-label" for="recommendation">Yes, I strongly recommend</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[recommendation]" id="recommendation" value="Unsure">
+                            <label class="form-check-label" for="recommendation">Its upto them</label>
+                        </div>
 
-                <p>From which institute have you got vaccinated? </p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[instituteType]" id="instituteType" value="Private">
-                    <label class="form-check-label" for="instituteType">Private</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="questionnaire[instituteType]" id="instituteType" value="Government">
-                    <label class="form-check-label" for="instituteType">Government</label>
-                </div>
+                    </li>
+                    <br><br>
+                    <li>
+
+                        <p>Have you taken precautions for 15 days after vaccination? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[precautions]" id="precautions" value="No" required>
+                            <label class="form-check-label" for="precautions">No</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[precautions]" id="precautions" value="Yes">
+                            <label class="form-check-label" for="precautions">Yes</label>
+                        </div>
+
+                    </li>
+                    <br><br>
+                    <li>
+
+                        <p>From which institute have you got vaccinated? </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[instituteType]" id="instituteType" value="Private" required>
+                            <label class="form-check-label" for="instituteType">Private</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="questionnaire[instituteType]" id="instituteType" value="Government">
+                            <label class="form-check-label" for="instituteType">Government</label>
+                        </div>
+                    </li>
+                </ol>
                 <div class="mb-3">
                     <button class="btn btn-success">Submit</button>
                 </div>
@@ -127,6 +142,28 @@
         </div>
     </div>
 </body>
+<script>
+    (function() {
+        'use strict'
 
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms)
+            .forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        alert("Please all the fields")
+                    }
+
+                    form.classList.add('was-validated')
+
+                }, false)
+            })
+    })()
+</script>
 
 </html>
