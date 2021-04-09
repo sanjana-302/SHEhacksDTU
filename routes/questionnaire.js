@@ -9,6 +9,7 @@ const questionnaire = require('../controller/questionnaire');
 
 router.route('/')
     .post(questionnaire.createQuestionnaire)
+    .get(questionnaire.index)
 
 router.get('/new', questionnaire.renderNewForm)
 

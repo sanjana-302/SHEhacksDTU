@@ -27,18 +27,9 @@ app.get('/', function(req, res) {
 
 app.use('/questionnaire', questionnaireRoutes)
 
-//TODO
-// app.get('/questionnaire', async(req, res) => {
-//     const allCampgrounds = await Questionnaire.find({});
-//     res.render("questionnaire/index", { allCampgrounds });
-// })
 
 
 
-// app.get('/campgrounds/:id', async(req, res) => {
-//     const campgroundById = await Questionnaire.findById(req.params.id);
-//     res.render("campgrounds/show", { campgroundById });
-// })
 
 app.listen(3000, () => {
     console.log("Serving");
