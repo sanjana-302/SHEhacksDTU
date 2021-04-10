@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Covid-Free</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../fightingcovid/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../fightingcovid/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../fightingcovid/assets/img/avicon-16x16.png">
+    <link rel="manifest" href="../fightingcovid/assets/img/site.webmanifest">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- CSS only -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="carousel/carousel.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/">Covid-Free</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/covid">Covid</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/questionnaire/graph">Statistics</a>
+                    </li>
+
+                    <% if(!currentUser) { %>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Sign up</a>
+                        </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/questionnaire/new">Questionnaire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Log out</a>
+                            </li>
+                            <% } %>
+            </div>
+        </nav>
+    </header>
+
+
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg> <img src="/images/cov19_1.jpg" width="100%" height="100%" />
+                    <!-- <rect width="100%" height="100%" fill="#777" /> -->
+                    </svg>
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1 style="color: rgb(255, 254, 254);">COVID-FREE</h1>
+                            <p>This informative website is made for the social welfare of the society for spreading general awareness related to Covid-19 vaccines and their respective effects.</p>
+                            <p><a class="btn btn-lg btn-danger" href="/register" role="button">Sign up today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg><img src="/images/cov19_3.jpg" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="color: rgb(247, 131, 195);">Why vaccination is important?</h1>
+                            <p>The COVID-19 vaccines produce protection against the disease. Developing immunity through vaccination means there is a reduced risk of developing the illness and its consequences.</p>
+                            <p><a class="btn btn-lg btn-warning" href="https://www.who.int/news-room/q-a-detail/coronavirus-disease-(covid-19)-vaccines?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAjw07qDBhBxEiwA6pPbHjcbosgyLJqKRBg7eKMgbA4M88FmCX4QXgexuDuEujgxpvcnbbWtyxoCaqsQAvD_BwE"
+                                    role="button" target="_blank">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg><img src="/images/cov19_4.jpg" width="100%" height="100%" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1 style="color: rgb(0, 0, 0)">India's commendable contributions!</h1>
+                            <p style="color: rgb(0, 0, 0)">WHO has acknowledged that the hard work and selfless service provided by India’s health workers, including nurses and midwives, have no doubt contributed to the country’s impressive recovery rate of 31.15 per cent.</p>
+                            <p><a class="btn btn-lg btn-warning" href="/gallery" role="button" target="_blank">See Contributions</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+  ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Covishield and Covaxin: What we know about India's Covid-19 vaccines <span class="text-muted">It’ll blow your mind.</span></h2>
+                    <p class="lead">India's Covaxin, the homegrown government-backed vaccine, has an efficacy rate of 81%, preliminary data from its phase 3 trial shows. Bharat Biotech, the vaccine's manufacturer, said the latest findings were "an important milestone
+                        in vaccine discovery, for science and our fight against coronavirus".
+                        <a href="https://www.bbc.com/news/world-asia-india-55748124" target="_blank">Click to read the whole article...</a>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title></svg><img src="images\cov_head.jpg"  width="500" height="500"></svg> -->
+                    <img src="images/cov_head.jpg" width="500" height="500">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-1">
+                    <h2 class="featurette-heading">India's fight against COVID-19 is inspiring the world: PM Modi <span class="text-muted">: PM Modi</span></h2>
+                    <p class="lead">India's fight against COVID-19 is inspiring the world, though at the beginning of the pandemic other countries worried about the countrys situation, Prime Minister Narendra Modi said on Tuesday.<a href="https://www.thehindu.com/news/national/indias-fight-against-covid-19-is-inspiring-the-world-pm-modi/article33852627.ece"
+                            target="_blank">Click to read the whole article...</a></p>
+                </div>
+                <div class="col-md-5">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                    <img src="../images/cov_head1.jpg" width="320" height="320">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Covid-19: <span class="text-muted">What you need to know today !</span></h2>
+                    <p class="lead">Last week, scientists, including some from the London School of Hygiene and Tropical Medicine published a study that showed the new variant to be 56% more infective. But there is still no evidence of it causing more severe Covid-19
+                        cases, or resulting in more deaths.<a href="https://www.hindustantimes.com/india-news/covid-19-what-you-need-to-know-today/story-14rri4dSyCKB4eGjmXXeVN.html" target="_blank">Click to read the whole article...</a></p>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="../images/cov19_2.jpg" width="500" height="500">
+
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div>
+        <!-- /.container -->
+
+        <p class="col-lg-6  offset-md-2 featurette-heading lead"><b> Developers of team "Bitsy-Bytes"!</b></p><br><br>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+
+            <div class="col-lg-2 offset-md-2">
+                <img src="../images/temp1.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <h2>Anshika <br> Awasthi</h2>
+                <p>Backend developer, designed the architecture of backend, created efficient data models & APIs, and worked on the integration of UI and business logic.</p><br>
+                <p><a class="btn btn-warning" href="https://www.linkedin.com/in/anshika-awasthi-86a047165/" role="button">View details &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-2">
+                <img src="../images/temp3.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2>Niharika <br> Varshney</h2>
+                <p> Front-end developer, Designed multiple pages by using technologies like html, CSS, bootstrap, JS. Extracted real-time tweets, graphs using suitable APIs. Framed questions for questionnaire .</p>
+                <p><a class="btn btn-warning" href="https://www.linkedin.com/in/niharika-varshney-982426197/" role="button">View details &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-2">
+                <img src="../images/temp2.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <h2>Sanjana <br> Maheshwari</h2>
+                <p>Backend developer, Worked on integration of realtime graphs to generate a better visualisation effect for users.</p><br><br><br>
+                <p><a class="btn btn-warning" href="https://www.linkedin.com/in/sanjana-maheshwari-a45944193/" role="button">View details &raquo;</a></p>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <img src="../images/temp4.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+                <h2>Vrinda <br> Sharma</h2>
+                <p>Front-end developer, Worked on the creation of efficient User-Interface, Collection of informative data from reliable sources and integrating them with the website to ensure seamless User-experience by using technologies like html, CSS,
+                    bootstrap, JS.</p><br>
+                <p><a class="btn btn-warning" href="https://www.linkedin.com/in/vrindasharma18/" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr class="featurette-divider">
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            &copy; Copyright <strong><span> Fight COVID-19</span></strong>. All Rights Reserved.<br> Designed by TEAM- Bitsy Bytes.
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

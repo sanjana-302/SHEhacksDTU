@@ -9,7 +9,7 @@ const questionnaireRoutes = require('./routes/questionnaire');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
-
+const bodyParser = require("body-parser");
 const userRoutes = require('./routes/users');
 
 mongoose.connect('mongodb://localhost:27017/vaccine', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
@@ -20,9 +20,12 @@ db.once('open', function() {
     console.log("connected");
 });
 
-
+app.use(express.static(__dirname + '/views'))
 
 app.set('view engine', 'ejs');
+
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(express.static("public"));
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -58,12 +61,27 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use('/', userRoutes);
 app.use('/questionnaire', questionnaireRoutes)
+app.use('/', userRoutes);
+
 
 app.get('/', function(req, res) {
-    res.render('home');
+    res.render('carousel/index');
 });
+
+app.get('/covid', function(req, res) {
+    res.render('fightingcovid/index');
+});
+
+app.get('/stats', function(req, res) {
+    res.render('fightingcovid/stats');
+});
+
+app.get('/gallery', function(req, res) {
+    res.render('fightingcovid/Gallery_with_links');
+});
+
+
 
 app.listen(3000, () => {
     console.log("Serving");
