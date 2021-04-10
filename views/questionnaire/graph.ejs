@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Graph</title>
+</head>
+
+<body>
+    <!-- TODO : Add graphs to frontend -->
+    <!-- 
+    0 - fatigue
+    1 - diarrhoea
+    2 - fever
+    3 - allergy
+    4 - recommendation
+    5 - precautions
+    -->
+    <h1>Vaccine data</h1>
+    <% var stats = [0,0,0,0,0,0] %>
+
+        <% for(let i = 0; i < data.length; i++) { %>
+            <% if(data[i].fatigue=="Yes"){ %>
+                <%stats[0]++;%>
+                    <%}%>
+                        <% if(data[i].diarrhoea=="Yes"){ %>
+                            <%stats[1]++;%>
+                                <%}%>
+                                    <% if(data[i].fever=="Yes"){ %>
+                                        <%stats[2]++;%>
+                                            <%}%>
+                                                <% if(data[i].allergy=="Yes"){ %>
+                                                    <%stats[3]++;%>
+                                                        <%}%>
+                                                            <% if(data[i].recommendation=="Yes"){ %>
+                                                                <%stats[4]++;%>
+                                                                    <%}%>
+                                                                        <% if(data[i].precautions=="Yes"){ %>
+                                                                            <%stats[5]++;%>
+                                                                                <%}%>
+
+                                                                                    <% } %>
+
+
+
+                                                                                        <% for(let i = 0; i < stats.length; i++) { %>
+                                                                                            <h2>
+                                                                                                <%= stats[i] %>
+                                                                                            </h2>
+                                                                                            <h2>
+                                                                                                <%= data.length-stats[i] %>
+                                                                                            </h2>
+                                                                                            <%}%>
+</body>
+
+</html>

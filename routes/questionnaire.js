@@ -13,6 +13,7 @@ router.route('/')
 
 router.get('/new', questionnaire.renderNewForm)
 
+router.get('/graph', questionnaire.show)
 
 
 

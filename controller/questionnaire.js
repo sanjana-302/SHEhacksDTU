@@ -2,8 +2,15 @@ const Questionnaire = require('../models/questionnaire');
 
 module.exports.index = async(req, res) => {
     const allAnswers = await Questionnaire.find({});
-    console.log(allAnswers);
-
+    res.send(allAnswers);
+    //console.log()
+    //res.render('questionnaire/graph',{data : allAnswers});
+}
+module.exports.show = async(req, res) => {
+    const allAnswers = await Questionnaire.find({});
+    //res.send(allAnswers);
+    //console.log()
+    res.render('questionnaire/graph', { data: allAnswers });
 }
 
 module.exports.renderNewForm = async(req, res) => {
