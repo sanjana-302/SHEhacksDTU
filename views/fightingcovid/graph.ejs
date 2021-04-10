@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>STATISTICAL ANALYSIS</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <!--<link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Bethany - v4.1.0
+  * Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/">Covid-Free</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/covid">Covid</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/questionnaire/graph">Statistics</a>
+                    </li>
+
+                    <% if(!currentUser) { %>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Sign up</a>
+                        </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/questionnaire/new">Questionnaire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Log out</a>
+                            </li>
+                            <% } %>
+            </div>
+        </nav>
+    </header>
+
+    <% var stats = [0,0,0,0,0,0,0] %>
+
+        <% for(let i = 0; i < data.length; i++) { %>
+            <% if(data[i].fatigue=="Yes"){ %>
+                <%stats[0]++;%>
+                    <%}%>
+                        <% if(data[i].diarrhoea=="Yes"){ %>
+                            <%stats[1]++;%>
+                                <%}%>
+                                    <% if(data[i].fever=="Yes"){ %>
+                                        <%stats[2]++;%>
+                                            <%}%>
+                                                <% if(data[i].allergy=="Yes"){ %>
+                                                    <%stats[3]++;%>
+                                                        <%}%>
+                                                            <% if(data[i].recommendation=="Yes"){ %>
+                                                                <%stats[4]++;%>
+                                                                    <%}%>
+                                                                        <% if(data[i].precautions=="Yes"){ %>
+                                                                            <%stats[5]++;%>
+                                                                                <%}%>
+                                                                                    <% if(data[i].instituteType=="Private"){ %>
+                                                                                        <%stats[6]++;%>
+                                                                                            <%}%>
+                                                                                                <% } %>
+
+
+
+
+
+
+                                                                                                    <!-- ======= Header ======= -->
+                                                                                                    <header id="header" class="fixed-top d-flex align-items-center">
+                                                                                                        <div class="container">
+                                                                                                            <div class="header-container d-flex align-items-center justify-content-between">
+                                                                                                                <div class="logo">
+
+                                                                                                                </div>
+                                                                                                                <!-- End Header Container -->
+                                                                                                            </div>
+                                                                                                    </header>
+                                                                                                    <!-- End Header -->
+
+
+
+                                                                                                    <main id="main">
+
+                                                                                                        <!-- ======= Clients Section ======= -->
+                                                                                                        <section id="clients" class="clients">
+                                                                                                            <div class="container">
+
+                                                                                                                <div class="row">
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            </div>
+                                                                                                        </section>
+                                                                                                        <!-- End Why Us Section -->
+
+                                                                                                        <!-- ======= Portfolio Section ======= -->
+
+
+                                                                                                        <h1 style="text-align: center;">STATISTICAL ANALYSIS OF REGISTERED COVID-19 VACCINATED PATIENTS </h1>
+
+
+
+                                                                                                        <!-- <p>Getting vaccinated against COVID-19 and maintaining other prevention measures are essential for you, your patients and your family to stay healthy. </p>
+      </div>
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title" data-aos="fade-left">
+            <!-- <div class="jumbotron">
+          <h2>STATISTICAL ANALYSIS OF REGISTERED COVID-19 VACCINATED PATIENTS </h2>
+          <p>Protect Yourself, Your Patients, and Family.</p>
+<p>Getting vaccinated against COVID-19 and maintaining other prevention measures are essential for you, your patients and your family to stay healthy. </p>
+</div>         -->
+
+
+                                                                                                        <div class="row" data-aos="fade-up" data-aos-delay="100">
+                                                                                                            <div class="col-lg-12 d-flex justify-content-center">
+                                                                                                                <!--    <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>-->
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <hr class="my-4">
+                                                                                                        <div style="height: 400px; width: 100%;background: rgb(243, 240, 240);">
+                                                                                                            <div id="chartContainer1" style="height: 300px; width: 60%; margin-right: 20%;margin-left: 20%;padding-top: 2%;"></div>
+                                                                                                        </div>
+                                                                                                        <hr class="my-4">
+                                                                                                        <div style="height: 400px; width: 100%;background: rgb(243, 240, 240);">
+                                                                                                            <div id="chartContainer2" style="height: 300px; width: 60%; margin-right: 20%;margin-left: 20%;padding-top: 2%;"></div>
+                                                                                                        </div>
+                                                                                                        <hr class="my-4">
+                                                                                                        <div style="height: 400px; width: 100%;background: rgb(243, 240, 240);">
+                                                                                                            <div id="chartContainer3" style="height: 300px; width: 60%; margin-right: 20%;margin-left: 20%;padding-top: 2%;"></div>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        <!-- <hr class="my-4">
+        <div id="chartContainer4" style="height: 300px; width: 60%;margin-right: 20%;margin-left: 20%;"></div> -->
+
+                                                                                                        <br>
+                                                                                                        <br>
+                                                                                                        </div>
+
+                                                                                                        </div>
+                                                                                                        </section>
+                                                                                                        <!-- End Portfolio Section -->
+
+
+                                                                                                    </main>
+                                                                                                    <!-- End #main -->
+                                                                                                    <hr class="my-4">
+
+                                                                                                    <!-- ======= Footer ======= -->
+                                                                                                    <footer id="footer">
+
+                                                                                                        <div class="footer-top">
+                                                                                                            <div class="container">
+                                                                                                                <!--  <div class="row">
+          
+  -->
+                                                                                                                <div class="container d-md-flex py-4">
+
+                                                                                                                    <div class="me-md-auto text-center text-md-start">
+                                                                                                                        <div class="copyright">
+                                                                                                                            &copy; Copyright <strong><span>FIGHTING COVID 19</span></strong>. All Rights Reserved
+                                                                                                                        </div>
+                                                                                                                        <div class="credits">
+                                                                                                                            <!-- All the links in the footer should remain intact. -->
+                                                                                                                            <!-- You can delete the links only if you purchased the pro version. -->
+                                                                                                                            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                                                                                                                            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/ -->
+                                                                                                                            Designed by Team Bitsy Bytes
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                                                                                                                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                                                                                                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                                                                                                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                                                                                                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                                                                                                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                    </footer>
+                                                                                                    <!-- End Footer -->
+
+                                                                                                    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+                                                                                                    <!-- Vendor JS Files -->
+                                                                                                    <script src="assets/vendor/aos/aos.js"></script>
+                                                                                                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                                                                                    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                                                                                                    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                                                                                                    <script src="assets/vendor/php-email-form/validate.js"></script>
+                                                                                                    <script src="assets/vendor/purecounter/purecounter.js"></script>
+                                                                                                    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+                                                                                                    <!-- Template Main JS File -->
+                                                                                                    <script src="assets/js/main.js"></script>
+                                                                                                    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                                                                                                    <script type="text/javascript">
+                                                                                                        window.onload = function() {
+                                                                                                            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                                                                                                                title: {
+                                                                                                                    text: "Number of people having different symptoms"
+                                                                                                                },
+                                                                                                                axisY: {
+                                                                                                                    title: "Number of vaccinated people",
+                                                                                                                    maximum: <%=data.length%>
+                                                                                                                },
+                                                                                                                data: [{
+                                                                                                                    type: "bar",
+                                                                                                                    showInLegend: true,
+                                                                                                                    legendText: "YES",
+
+                                                                                                                    dataPoints: [{
+                                                                                                                        y: <%=stats[2]%>,
+                                                                                                                        label: "CHILLS WITH FEVER"
+                                                                                                                    }, {
+                                                                                                                        y: <%=stats[1]%>,
+                                                                                                                        label: "DIARRHOEA"
+                                                                                                                    }, {
+                                                                                                                        y: <%=stats[3]%>,
+                                                                                                                        label: "ANY ALLERGIC RXN"
+                                                                                                                    }, {
+                                                                                                                        y: <%=stats[0]%>,
+                                                                                                                        label: "FATIGUE"
+                                                                                                                    }]
+                                                                                                                }, {
+                                                                                                                    type: "bar",
+                                                                                                                    showInLegend: true,
+                                                                                                                    legendText: "NO",
+
+                                                                                                                    dataPoints: [{
+                                                                                                                        y: <%=data.length-stats[2]%>,
+                                                                                                                        label: "CHILLS WITH FEVER"
+                                                                                                                    }, {
+                                                                                                                        y: <%=data.length-stats[1]%>,
+                                                                                                                        label: "DIARRHOEA"
+                                                                                                                    }, {
+                                                                                                                        y: <%=data.length-stats[3]%>,
+                                                                                                                        label: "ANY ALLERGIC RXN"
+                                                                                                                    }, {
+                                                                                                                        y: <%=data.length-stats[0]%>,
+                                                                                                                        label: "FATIGUE"
+                                                                                                                    }]
+                                                                                                                }]
+                                                                                                            });
+                                                                                                            var chart2 = new CanvasJS.Chart("chartContainer2", {
+                                                                                                                title: {
+                                                                                                                    text: "Would you recommend others to get vaccinated?"
+                                                                                                                },
+                                                                                                                legend: {
+                                                                                                                    maxWidth: 350,
+                                                                                                                    itemWidth: 120
+                                                                                                                },
+                                                                                                                data: [{
+                                                                                                                    type: "pie",
+                                                                                                                    showInLegend: true,
+                                                                                                                    legendText: "{indexLabel}",
+                                                                                                                    dataPoints: [{
+                                                                                                                            y: <%=data.length-stats[4]%>,
+                                                                                                                            indexLabel: "Yes, i strongly recommend"
+                                                                                                                        }, {
+                                                                                                                            y: <%=stats[4]%>,
+                                                                                                                            indexLabel: "No, i don't"
+                                                                                                                        },
+
+                                                                                                                    ]
+                                                                                                                }]
+                                                                                                            });
+                                                                                                            var chart3 = new CanvasJS.Chart("chartContainer3", {
+                                                                                                                title: {
+                                                                                                                    text: "From where you have received vaccine?"
+                                                                                                                },
+                                                                                                                legend: {
+                                                                                                                    maxWidth: 350,
+                                                                                                                    itemWidth: 120
+                                                                                                                },
+                                                                                                                data: [{
+                                                                                                                    type: "pie",
+                                                                                                                    showInLegend: true,
+                                                                                                                    legendText: "{indexLabel}",
+                                                                                                                    dataPoints: [{
+                                                                                                                        y: <%=stats[4]%>,
+                                                                                                                        indexLabel: "PRIVATE INSTITUTION"
+                                                                                                                    }, {
+                                                                                                                        y: <%=data.length-stats[4]%>,
+                                                                                                                        indexLabel: "GOVERNMENT INSTITUTION"
+                                                                                                                    }, ]
+                                                                                                                }]
+                                                                                                            });
+                                                                                                            var chart4 = new CanvasJS.Chart("chartContainer4", {
+                                                                                                                title: {
+                                                                                                                    text: "Were the frontline/ healthcare cooperative and helpful towards you?"
+                                                                                                                },
+                                                                                                                data: [{
+                                                                                                                    type: "doughnut",
+                                                                                                                    dataPoints: [{
+                                                                                                                        y: 53,
+                                                                                                                        indexLabel: "Yes, they were cooperative"
+                                                                                                                    }, {
+                                                                                                                        y: 7,
+                                                                                                                        indexLabel: "No"
+                                                                                                                    }, {
+                                                                                                                        y: 23,
+                                                                                                                        indexLabel: "They were alright"
+                                                                                                                    }, ]
+                                                                                                                }]
+                                                                                                            });
+                                                                                                            chart1.render();
+                                                                                                            chart2.render();
+                                                                                                            chart3.render();
+                                                                                                            chart4.render();
+                                                                                                        }
+                                                                                                    </script>
+
+</body>
+
+</html>

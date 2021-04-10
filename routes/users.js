@@ -34,13 +34,13 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), (req, res) => {
     req.flash('success', 'welcome back!');
-    res.send("Your response has been taken");
+    res.redirect('/covid');
 })
 
 router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success', "Thanks for sharing your experience!");
-    res.redirect('/home');
+    res.redirect('/');
 })
 
 module.exports = router;
