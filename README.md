@@ -15,7 +15,7 @@ Project build for hackathon organized by CLIMB DTU.
  👾‍Provide a holistic dashboard to keep a track of events happening around the globe regarding covid. 
  
  
- 👾‍Generates a reatime image of data granted by authenticated users.
+ 👾‍Generates a realtime image of data granted by authenticated users.
  
  
  👾‍Motivates general public to count on exclusive data and not merely on some buzz flying around.
