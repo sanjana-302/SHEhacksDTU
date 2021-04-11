@@ -1,5 +1,5 @@
-# COVID - FREE by BITSY BYTES , SheHacksDTU
-Project build by bitsy bytes for hackathon organized by CLIMB DTU.
+# COVID - FREE
+# Project built by BITSY BYTES as a part of SheHacksDTU 2021 conducted by CLIMB DTU.
 
 
 
